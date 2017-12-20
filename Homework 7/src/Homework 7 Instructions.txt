@@ -1,0 +1,62 @@
+CSCE 111
+Fall 2015
+HOMEWORK 7
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+1. EMPLOYEE ORGANIZATION
+You have been hired by the Sandwich Queen Company to help organize their employees.
+Create an Employee superclass which contains:
+	- A field for name
+	- A field for payrate
+	- A constructor that assigns the fields
+Create a class called SandwichArtisan which extends Employee and contains:
+	- A field for the number of sandwiches made per hour
+	- A field for customers served per hour
+	- Appropriate constructor and accessors
+Create a class called QueenManager which extends Employee and contains:
+	- A field for the number of employees managed
+	- A field for the paybonus the manager receives
+	- A void method that calculates the paybonus as:
+		paybonus = total customers served per hour * 2
+	  	The method must take an array of SandwichArtisans as an argument to calculate the total customers served by all the artisans.
+		Store the result in your class field.
+	- Appropriate constructor and accessors
+
+Write a main class which creates 1 QueenManager and 3 SandwichArtisans, making up values for their fields (no need to ask the user).
+Add the 3 SandwichArtisans to an array and use it to calculate the paybonus of the Manager.
+Output the name and paybonus earned by the manager, and search your array for the employee with the most customers served.
+Output the name of the employee as the employee of the month.
+
+
+Name your main class Hw7pr1 and your file Hw7pr1.java. Turn in all .java files
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+2. PET LIST
+Create a class called Pet which contains:
+	- A field for the name of the pet
+	- A field for the age of the pet
+	- Appropriate constructor and accessors
+Create a class called Dog which extends the Pet class and has:
+	- A field for breed of dog
+	- A field for body weight
+	- Appropriate constructor and accessors
+	- A toString method that prints the name, age, breed and weight of the dog
+Create a class called Cat which extends the Pet class and has:
+	- A field that describes the coat of the cat (example: short/long/plush/silky/soft)
+	- A field for whether it is a lap cat
+	- Appropriate constructor and accessors
+	- A toString method that prints the name, age and coat type of the cat, and whether it is a lap cat
+Create a class called Fish which extends the Pet class and has:
+	- A field for type of fish
+	- A field for the color of its scales
+	- Appropriate constructor and accessors
+	- A toString method that prints the name, age, type and scale color of the fish
+
+Write a main which asks the user to enter the number of pets (n) and then ask for the details for each pet. Ask for the correct information depending on the type of pet.
+Create a Dog,Cat or Fish object as required. Add each pet to an ArrayList of Pets.
+After all information is entered and stored, print out the gathered information of all objects in the list, starting with the all the Fish first, then Cats and then Dogs.
+
+Hint: You can use the instanceOf operator (Page 667 of your textbook) to find out if a pet is a fish, cat or dog.
+
+Name your main class Hw7pr2 and your file Hw7pr2.java. Turn in all .java files

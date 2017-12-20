@@ -1,0 +1,109 @@
+CSCE 111
+Fall 2016
+HOMEWORK 6
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+1. AREAS
+Write a program that contains 3 overloaded static methods for calculating the areas of the following shapes.
+All 3 methods should be named calculateArea, but have different parameter lists.
+	- Circle : Ï€rÂ²
+	- Rectangle : width x length
+	- Trapezoid : height x (base1 + base2)/2
+
+In the main, ask the user to enter the name of a shape and then the parameters required for calculating the area. Check that inputs are valid.
+Then call the appropriate area method and output the result.
+
+Name your class Hw6pr1 and your file Hw6pr1.java
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+2. FRACTIONS
+Write a class called Fraction, which can be used to store an exact fraction. It must have:
+	- A field to store the numerator
+	- A field to store the denominator
+	- A toString method that returns a neatly formatted String representing the fraction
+	- An equals method that compares itself to another Fraction
+	- An add method that adds itself to another Fraction and returns a new Fraction
+	- Appropriate constructor and accessors as needed
+
+Write a program that asks the user to enter the numerators and denominators of two fractions and create corresponding Fraction objects.
+Check for valid input and a 0 denominator.
+Then output both Fractions (using your toString method implicitly), whether they are equal, and their sum.
+Note: You do not need to reduce your answer for the equals and sum.
+
+Name your main class Hw6pr2 and your file Hw6pr2.java. Submit all .java files
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+3. PARKING TICKET
+You have been hired by TAMU Transportation Services to write a program that simulates all parts of a TAMU police officer issuing a parking ticket.
+The classes you need to create are:
+  ParkedCar
+	- Has fields for the car's make, model, color, license plate and number of minutes parked.
+	- Appropriate constructor and accessor methods
+  ParkingMeter
+	- A field for the parking lot number
+	- A field for the number of minutes that were purchased on the meter.
+	- Appropriate accessor methods
+  PoliceOfficer
+	- Has fields for the officer's name and officer's badge number
+	- A method called examine which takes as arguments a ParkedCar and ParkingMeter and determines if the car is parked illegally.
+		The officer then determines a fine which is calculated as $1 for each minute over the limit.
+		It returns a ParkingTicket if required, or returns null if not.
+	- Appropriate constructor and accessor methods
+  ParkingTicket
+	- Has fields which contain the fine amount, the parking lot number, the car's information and the police officer's information.
+	- Appropriate constructor and accessor methods
+
+Now, write a main in which you create 3 ParkedCar objects and 3 ParkingMeter objects.
+Initialize each of these 6 objects with a random number (between 1-500) for the minutes (make up the rest of the Car information).
+Now create 1 PoliceOfficer (make up a name and badge number) that examines each ParkedCar and its associated ParkingMeter objects and generates a ParkingTicket if required.
+Your final output should be the number of ParkingTickets generated, along with the information about the ParkedCar, PoliceOfficer and the ticket amount, for each ticket.
+If there were no tickets generated, display "No tickets generated!"
+
+Name your main class Hw6pr3 and your file Hw6pr3.java. Submit all .java files
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+4. SUM STRING
+Write a program that asks the user to enter a String, then output the sum of all digits found in the String.
+
+Hint: Trying to sum the characters directly will add the ascii value of the character. The easiest way to treat a char as an int is:
+	int x = Character.getNumericValue(ch); //where ch is a char
+
+Example Output:
+	Enter a String: akvn34va3a74
+	The sum is 21
+
+Name your main class Hw6pr4 and your main file Hw6pr4.java.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+5. ODD ONE OUT
+Given 2 strings that have all letters in common except one, find the letter that is the odd one out.
+
+Hint: Check out the Java String class documentation. Is there a String method that can make this easy?
+
+Example Output:
+	Enter 2 words:
+  	chase
+  	arches
+
+	The extra letter is r
+
+Name your class Hw6pr5 and your file Hw6pr5.java
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+6. DO GEESE SEE GOD?
+Palindromes are words that spell the same backwards or forwards, such as 'noon' or 'racecar'.
+However, more interesting are palindromic sentences, which sometimes dont make any sense.
+For Example:
+	Eva, Can I Stab Bats In A Cave?
+	Never Odd Or Even!
+	Goddesses so pay a possessed dog.
+Write a program that asks the user to enter a sentence and determines if it is a palindrome. Ignore spaces, case and punctuation.
+
+Name your class Hw6pr6 and your file Hw6pr6.java

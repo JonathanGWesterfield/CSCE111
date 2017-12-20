@@ -1,0 +1,129 @@
+CSCE 111
+Fall 2016
+HOMEWORK 4
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+1. TRIFORCE
+Write a program that calculates the area of the shaded region of the shape below.
+This shape, known to some as the triforce, consists of 3 shaded triangles which together form a larger triangle, which are all equilateral.
+Your program should include a method called equilateralArea that takes as an argument a double for the side and returns the area of a such a triangle using this formula:
+	Area = side^2 * sqrt(3)/4
+In Java, these operations can be done using Math.sqrt(x) and Math.pow(base, exponent).
+
+           /\
+          /==\
+         /====\
+        /======\
+       /========\
+      /==========\
+     /\__________/\
+    /==\        /==\
+   /====\      /====\
+  /======\    /======\
+ /========\  /========\
+/==========\/==========\
+\__________/\__________/
+
+In your main, ask the user to enter the length of the side of the large (outer) triangle.
+Then output the area of the shaded region by using your method to calculate (area of the outer triangle) - (area of the unshaded smaller triangle).
+Call your method twice, once for the outer and once for the inner.
+You can get the side of the smaller triangle by taking half of the larger side. Round your answer the 2 decimal places.
+
+Note: The drawing above is only a visual. Your program doesn’t need to output a drawn triangle. Just output the area value.
+
+Name your class Hw4pr1 and your file Hw4pr1.java
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+2. FISHY BUSINESS
+In the lawless world of underground fish racing, everyone looks to use any information they can to gain an advantage.
+We have recently come across a formula to help us estimate the distance travelled by a fish based on their size and frequency of their tail beat.
+The formula is:
+D = (s/4) * (L(3f - 4))
+where D is distance travelled by the fish in cm, f is the frequency in tail beats per sec, L is the body length in cm, and s is the number of seconds.
+Write a Java program that predicts the winner of a race between 3 different fish.
+
+First, ask the user to enter the length and frequency of the tail beats of 3 fish.
+Write a method called fishDistance that given arguments L, f and s, returns the distance travelled by the fish after s seconds.
+In your main method, use your fishDistance method to print the distances travelled by all the fish at each second for 20 seconds.
+
+Check for valid input. The length of the fish must be a positive number and the tail frequency must be greater than 1.
+If invalid input is entered, repeatedly ask the user to re-enter values until it is valid. Round output to 2 decimal places.
+
+Example Output:
+	Enter length of fish1: 5
+	Enter tail beat frequency of fish1: 5
+
+	Enter length of fish2: 7
+	Enter tail beat frequency of fish2: 3
+
+	Enter length of fish3: 9
+	Enter tail beat frequency of fish3: 2
+
+	Results:
+	After 1 seconds, fish1 swam 13.75 cm, fish2 swam 8.75 cm, fish3 swam 4.50 cm
+	After 2 seconds, fish1 swam 27.50 cm, fish2 swam 17.50 cm, fish3 swam 9.00 cm
+	...
+	After 19 seconds, fish1 swam 261.25 cm, fish2 swam 166.25 cm, fish3 swam 85.50 cm
+	After 20 seconds, fish1 swam 275.00 cm, fish2 swam 175.00 cm, fish3 swam 90.00 cm
+
+
+Name your class Hw4pr2 and your file Hw4pr2.java
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+3. ROCK PAPER SCISSORS
+Your non-programmer friends have challenged your Java programming skills, and you are going to prove them wrong.
+Write a program that will play rock, paper, scissors against them, but since we are annoyed at this challenge, write it in such a way that it can never lose.
+However, it must be able to tie so that they don’t get TOO suspicious.
+In your main, ask the user to enter their choice - rock, paper or scissors.
+Write a method that given the user's choice, generates and returns the computer's choice. It should randomly pick the winning choice or tie the user's choice.
+As your output, show both the user's and the computer's choice and declare the winner or the tie.
+Keep asking the user if they want to play until they give up and you have claimed your superiority.
+
+Name your class Hw4pr3 and your file Hw4pr3.java
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+4. A TEST DRIVE
+Create a class called Car in a file called Car.java that has the following:
+ - A String field called make
+ - A String field called model
+ - An int field called mileage
+ - An int field called speed
+ - A constructor method that accepts the car's make, model as arguments and assigns them to the class fields. Also set the car's speed and mileage to be 0.
+ - A method called accelerate - Increases the speed of the car by 5
+ - A method called brake - Decreases the speed of the car by 10
+ - An accessor method called getSpeed - This should just return the value of the speed field.
+ - An accessor method called getMileage - This should just return the value of the mileage field.
+ - A mutator method called setMileage - This should change the value of the mileage field to the given argument.
+
+Write a separate main class that contains a main method. In the main, create a Car object with the required arguments (make up some values, no need to ask the user).
+Drive your new car by writing a loop that calls accelerate on your Car object 10 times.
+In each iteration, after accelerating use your accessor method to get and display the speed of your car. Also update and display the mileage of your car by adding the value of the speed.
+Finally, stop driving by calling your brake method. Keep calling this method until your speed is 0. Display current speed and update your mileage every time you brake.
+
+Note: You need to be using an instance of your Car class. Nothing (except the main method) should be static.
+
+Name your main class Hw4pr4 and your main file Hw4pr4.java. Remember to submit both Hw4pr4.java and Car.java
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+5. TOSS A DOLLAR
+Create a Coin class with the following information:
+ - A double field for the value of the coin
+ - A boolean field indicating the side of the coin that is facing up - heads (true) or tails (false)
+ - A constructor that assigns values to both fields to begin.
+ - An accessor method that returns the side of the coin that is facing up
+ - A method called toss, which randomly determines the side of the coin that is facing up.
+
+Write a separate main class that contains a main method. In the main, we will play a game with the user in which we will toss all three coins and add up their values.
+Keep tossing the coins until the value exceeds $1. If they are able to get exactly $1 they win the game.
+
+To begin, create 3 coin objects, giving one a value of 25c, one a value of 10c and another a value of 5c. Next, ask the user if they wish to start a game.
+If yes, toss all three coins and if they fall heads up, add their value to the total. If the total is below $1, toss all three coins again.
+Output the result and total after each toss, and output if they won or busted.
+Then ask if they wish to play again, and if yes, reset the totals and repeat the tossing process.
+
+Name your main class Hw4pr5 and your file Hw4pr5.java. Remember to submit both Hw4pr5.java and Coin.java

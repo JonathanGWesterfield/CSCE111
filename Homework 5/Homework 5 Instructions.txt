@@ -1,0 +1,198 @@
+CSCE 111
+Fall 2016
+HOMEWORK 5
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+1. PRICE FLUX
+Write a program that helps the user determine the performance of a stock given its recent prices.
+First ask the user how many stock prices they wish to enter (n). Then read n prices and store them into an array.
+After you have stored all input, display the following:
+ - The highest seen price of the stock
+ - The lowest seen price of the stock
+ - The average price of the stock over the period
+ - If the overall trend is gain or lose (is the last price higher or lower than the first?)
+
+ Round all output to 2 decimal places wherever you are printing prices.
+
+Name your main class Hw5pr1 and your file Hw5pr1.java.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+2. BIG MONEY
+To feed the gambling addiction we established with the slot machine exercise in Assignment 3, write a program that simulates the Powerball lottery.
+Create a PowerBall class that contains:
+ - A field for an int array of size 6.
+ - A constructor that initializes this array with 6 random values (0-9).
+ - A method called checkMatch that takes as an argument an int array and returns how many numbers match the class's int array. To match, the same numbers must be in the same position.
+
+Write a main class which asks to user to enter 6 numbers as their lottery ticket and store it in an array.
+Then create a PowerBall object and give the user's ticket to the checkMatch method. Figure out the amount won based on the return value.
+
+The winnings are determined as follows:
+If 0 numbers match, no winnings
+If 1 number matches, win $4
+If 2 numbers match, win $7
+If 3 numbers match, win $100
+If 4 numbers match, win $10,000
+If 5 numbers match, win $1 Million
+If all 6 numbers match, win Grand Prize of $450 Million
+
+Output the user's lottery ticket, the powerball numbers, how many matched, and the amount of money won.
+
+Name your main class Hw5pr2 and your file Hw5pr2.java. Turn in all java files.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+3. SUPERBOWL HISTORY
+To begin, download the text file and save it in the same folder as your java source files:
+http://courses.cs.tamu.edu/hurley/cpsc111/homework/SuperBowlWinners.txt
+
+Next, write a program that opens and reads the data from this file into a 2D array.
+Each row of your array corresponds to one line of the file. The first column should contain the year and the second column the full team name.
+Then ask the user to enter a year, and output the team that won the SuperBowl that year. Give an error if the year is not in the data. Let the user keep entering a year until they enter STOP.
+
+Hint: Remember that Scanner gives you different options for reading input. For example, the next() method stops reading when it sees a space, tab, or newline character, while the nextLine() method only stops when it sees a newline character (\n).
+
+Name your main class Hw5pr3 and your main file Hw5pr3.java.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+4. GRADE BOOK
+Create a class called Student that contains:
+ - A field to store the name
+ - A field to store their average numerical grade
+ - A field to store their letter grade
+ - A constructor that sets the information in all the fields
+ - Appropriate accessor methods
+
+Write a main class that asks the user the number of students in the class (n). Then prompt for the information for all students and create a Student object for each one.
+Use an ArrayList to store all the Student objects created. Your ArrayList must be of type student.
+After all the data is entered, write a loop that iterates through your array and displays a neatly formatted gradebook, with the averages rounded to 1 decimal place:
+
+Example Output:
+	  Name         |    Average  |    Grade
+	  Stew Dent    |       78.3  |        C
+	  Joe Schmoe   |       91.1  |        A
+	  .
+	  .
+	  .
+	  ...up to n students
+
+Hint: Look at pages 166 - 173 in your textbook for how to format the output. Assume 20 for the maximum length of the name.
+
+Name your main class Hw5pr4 and your file Hw5pr4.java. Turn in all java files.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+5. MAZE RUNNER
+Waking up one morning, we find ourselves in a maze, and no idea of how we got here. Trying to get out, we discover that the walls of the maze randomly move!
+Luckily, we can use our Java programming skills and write a program to help us find an exit.
+
+First, download this file and save it in the same folder as your solution
+http://courses.cs.tamu.edu/hurley/cpsc111/homework/MazeCreator.class
+
+This file contains two methods:
+public static int[][] generateMaze(int size) : Takes a size and returns a random maze as a 2D int array
+public static void printMaze(int[][] maze, int size): A utility function that takes as arguments the maze and the size and prints the maze to the screen
+
+In your program, first ask the user for the size of the maze. Then, use MazeCreator to generate a random maze and print it to the screen.
+In the maze, 1 represents a wall, 0 represents an open space. You will always start at position [size/2][0] (written as row,column).
+
+Next, write a method that given the maze, determines whether there is a path to any exit from the starting point.
+To do this, keep track of your position (row and column) and your moves. Use an ArrayList for your list of moves - this will make it easier to add/remove moves.
+If you reach a dead-end, backtrack your moves and try to go in another direction. Keep going until you reach an exit or return to the starting point with no more directions to explore.
+In the end, output whether you found an exit, and the list of all your moves (you dont have to match the exact format of the example below, just make your solution readable easily).
+
+Hint1: To help visualize your solution, try drawing out a sample maze and trace how your program should execute.
+Hint2: The exit will always be on the right side of the maze
+Hint3: Keep track of where you have been by changing the value of the space in the maze. (In the examples below 9 is used to identify the visited path)
+
+
+EXAMPLE OUTPUT OF 2 EXECUTIONS:
+
+------------------------------------------------------------------------
+Enter size: 10
+
+Maze (size = 10, start = (5, 0), 1 = wall, 0 = open path):
+          1111111111 --> EXIT
+          1111111111 --> EXIT
+          1111111111 --> EXIT
+          1111100111 --> EXIT
+          1101100111 --> EXIT
+START --> 0000000011 --> EXIT
+          1111111011 --> EXIT
+          1111111000 --> EXIT
+          1111111001 --> EXIT
+          1111111000 --> EXIT
+5, 0
+RIGHT 5, 1
+RIGHT 5, 2
+RIGHT 5, 3
+RIGHT 5, 4
+RIGHT 5, 5
+RIGHT 5, 6
+RIGHT 5, 7
+DOWN 6, 7
+DOWN 7, 7
+RIGHT 7, 8
+RIGHT Exit Successful!
+Maze (size = 10, start = (5, 0), 1 = wall, 0 = open path):
+          1111111111 --> EXIT
+          1111111111 --> EXIT
+          1111111111 --> EXIT
+          1111100111 --> EXIT
+          1101100111 --> EXIT
+START --> 0999999911 --> EXIT
+          1111111911 --> EXIT
+          1111111999 --> EXIT
+          1111111001 --> EXIT
+          1111111000 --> EXIT
+
+------------------------------------------------------------------------
+Enter size: 10
+
+Maze (size = 10, start = (5, 0), 1 = wall, 0 = open path):
+          1111100000 --> EXIT
+          1111101111 --> EXIT
+          1110000011 --> EXIT
+          1110000011 --> EXIT
+          1100100100 --> EXIT
+START --> 0001110000 --> EXIT
+          1111111111 --> EXIT
+          1111111111 --> EXIT
+          1111111111 --> EXIT
+          1111111111 --> EXIT
+5, 0
+RIGHT 5, 1
+RIGHT 5, 2
+UP 4, 2
+RIGHT 4, 3
+UP 3, 3
+RIGHT 3, 4
+RIGHT 3, 5
+RIGHT 3, 6
+RIGHT 3, 7
+UP 2, 7
+BACK TO 3, 7
+BACK TO 3, 6
+DOWN 4, 6
+DOWN 5, 6
+RIGHT 5, 7
+RIGHT 5, 8
+RIGHT Exit Successful!
+Maze (size = 10, start = (5, 0), 1 = wall, 0 = open path):
+          1111100000 --> EXIT
+          1111101111 --> EXIT
+          1110000911 --> EXIT
+          1119999911 --> EXIT
+          1199109100 --> EXIT
+START --> 0991119999 --> EXIT
+          1111111111 --> EXIT
+          1111111111 --> EXIT
+          1111111111 --> EXIT
+          1111111111 --> EXIT
+
+
+
+Name your main class Hw5pr5 and your file Hw5pr5.java.

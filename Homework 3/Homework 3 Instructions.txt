@@ -1,0 +1,110 @@
+CSCE 111
+Fall 2016
+HOMEWORK 3
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+1. A SUM OF THREE
+Write a program that asks the user for a number n. Then output the sum of all numbers from 1 to n (n included) that are divisible by 3.
+
+Example Output:
+	Enter a number: 99
+	The sum is 1683
+
+Name your class Hw3pr1 and your file Hw3pr1.java
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+2. A MOVING AVERAGE
+Write a program that asks the user to repeatedly enter a number. After every input, output the average of all the numbers entered so far.
+Stop when the user enters 0. Round all your output to 2 decimal places.
+
+Example Output:
+	Enter a number: 4
+	The average so far is 4.00
+	Enter a number: 12.3
+	The average so far is 8.15
+	Enter a number: 6.2
+	The average so far is 7.50
+	Enter a number: 0
+	Done!
+
+Name your class Hw3pr2 and your file Hw3pr2.java
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+3. A COUNT OF WORDS
+One of the good practices of writing is to not use the same word over and over and over again.
+We are going to write a program to help improve our writing skills.
+First, use Notepad++ or similar to create a text file with some random text and save it in the same folder as where your code will be.
+Next, write a program that takes as input two strings - one is a filename, one is a word.
+Your program should open the file with the given file name and count the number of times the given word occurs. Output the final count.
+
+Note: Count all the words that match regardless of case.
+Also, punctuation might cause mismatches because it is read by Scanner as included with the word. This is fine for now - we will handle punctuation later in Ch. 9
+
+Hint: For a good example of file reading look at the example on Page 245 of your text and Slide 44 of the Chapter 4 code slides.
+
+Example Output:
+	Enter a file name : testfile.txt
+	Enter a word: the
+
+	The word "the" occurs 5 times in the file
+
+Name your class Hw3pr3 and your file Hw3pr3.java. You only need to turn in your java file.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+4. FAIRY TALE RACERS
+A burning question in the fairy tale expert community has always been: Who is the fastest among the all the fairy tale characters?
+To determine this, simulate a race between the hare, the tortoise, the sheep and the wolf for ten timesteps (counted as 0-9), and output how far all the racers travelled after the race is over.
+Then declare the winner of the race. If there is a tie for first place, pick any one of the tied racers to be the winner.
+Note: A correctly written program should result in a close race, with a chance for every racer to win. Check by running your program multiple times.
+
+The hare: Moves randomly 13 - 17 miles per timestep, but sees itself in the lead and falls asleep on timesteps 2 - 9 and does not move.
+The tortoise: Moves randomly 1 - 2 miles per timestep, but gets to move twice per step due to its determination.
+The sheep: Moves randomly 6 - 10 miles on even timesteps, but gets lost and moves -2 miles backwards on odd timesteps.
+The wolf: Moves randomly 4 - 5 miles per timestep, but stops to huff and puff on steps 3, 6 and 9.
+
+Name your class Hw3pr4 and your file Hw3pr4.java
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+5. PYRAMID SCHEME
+Now that we know how to write loops, we can re-do a smarter version of the problem from Assignment 1.
+Write a program that asks the user for a size (n) and a character, and then outputs a pyramid pattern of that size using the character.
+
+Hint: The total number of characters you need to print in the last row will always be 2n - 1.
+
+Example Output:
+	Enter the size of the pyramid: 4
+	Enter the character to use: x
+
+    x
+   xxx
+  xxxxx
+ xxxxxxx
+
+Name your class Hw3pr5 and your file Hw3pr5.java
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+6. VIRTUAL GAMBLING
+Since a trip to Vegas can get quite expensive, as programmers we can be clever and create our own gambling experience.
+Write a program that simulates a slot machine by asking the user to enter the amount of money they want to bet. The lowest amount they can bet is $1.
+Next, simulate spinning the machine by choosing one of these words randomly: Cherries, Oranges, Plums, Bells, Melons, Bars
+You can do this easily by generating a random number with a value between 0 - 5. Each number corresponds to a string, for example 0 = Cherries, 1 = Oranges and so on. 
+Select a random string 3 times and output the result of the spin.
+
+The next thing to do is to determine the result of the spin. The results are based on these rules:
+If none of the words match, the player loses half their money. (e.g., $20 becomes $10)
+If two of the words match, the player doubles their money.     (e.g., $20 becomes $40)
+If all three match, the player gains 5 times their money.      (e.g., $20 becomes $100)
+
+Finally, show the player their total amount at the end of the round and ask if they want to play again as long as their money is greater than $1.
+Repeat the spin if they want to play again.
+If they don’t, or their total is less than $1, quit the program.
+
+Name your class Hw3pr6 and your file Hw3pr6.java

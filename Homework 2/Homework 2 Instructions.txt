@@ -1,0 +1,126 @@
+CSCE 111
+Fall 2016
+HOMEWORK 2
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+1. CLOSER
+Write a program that inputs 2 positive numbers from the user and outputs the number that is closer to 50.
+If they are the same distance, output that they are the same. If the user enters negative numbers, show an error message and quit the program.
+
+Hint: You can find the absolute value of a number x by using Math.abs(x)
+
+Example Output:
+	Enter two numbers: 32 57
+	The number 57 is closer to 50
+
+Name your class Hw2pr1 and your file Hw2pr1.java
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+2. TEEN
+Write a program that asks the user to enter a number. Then output true or false depending on whether the number ends in 'teen'.
+You only need to look at the last two digits of the number to determine this.
+
+Hint: Think about how to use the modulus operator which is introduced on Page 55 of your textbook.
+
+Example Output (assuming the program is run 3 times):
+	Enter a number: 17
+	true
+
+	Enter a number: 27
+	false
+
+	Enter a number: 2215
+	true
+
+Name your class Hw2pr2 and your file Hw2pr2.java
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+3. ALIEN AGE
+Your age really tells us how many times the Earth has circled the Sun since you were born. Other planets can take shorter or longer times to complete their orbit.
+Write a program that asks the user to enter their age on Earth and a planet name and outputs their age on that planet.
+Round your answer to 1 decimal place. Check that they entered a valid positive number for the age.
+
+Here is a list of the planets you can use:
+Planet     Earth Days for 1 orbit
+Mercury          88.0
+Venus            224.7
+Mars             687.0
+Jupiter          4332
+Neptune          60200
+
+Name your class Hw2pr3 and your file Hw2pr3.java
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+4. ATTENDANCE
+Your class has a large number of students and the TA needs your help sorting the names to mark attendance quickly.
+Write a program that asks the user to enter in 3 names and then outputs them in sorted order. If the same name is entered,
+output them in any order.
+
+Hint: Look at Section 3.6 in the textbook or Slide 21 in the code slides for an example of how to compare Strings.
+
+Example Output:
+	Enter the first name: Robert
+	Enter the second name: Ryan
+	Enter the third name: Cindy
+
+	Cindy
+	Robert
+	Ryan
+
+Name your class Hw2pr4 and your file Hw2pr4.java
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+5. SPEEDING TICKET
+You were driving a little too fast and have been caught speeding by a police officer.
+The officer is a bit of a geek and offers you 3 options to calculate your fine:
+
+Option 1 : Base fine of $50, +$7 for each mph you were over the limit.
+Option 2 : Base fine of $70, +$3 for each mph you were over the limit.
+Option 3 : Base fine of $100, +$1 for each mph you were over the limit.
+
+Write a program that takes as input the speeding limit and the speed clocked by the officer. Check that the input is valid.
+Then output the option that gives you the lowest fine, as well as the fine amount. If 2 options produce the same result,
+you can output any one of the options.
+
+Name your class Hw2pr5 and your file Hw2pr5.java
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+6. AM I YOUR TYPE?
+You have been hired by a friendly vampire to help him figure out his diet. He can only drink certain blood types depending on his blood group compatibility.
+To determine this, write a program that takes as input his blood type, and the blood type of his prey and outputs whether they are safe to consume.
+You can assume all input to be uppercase characters.
+
+Here is a blood type compatibility chart that will help you determine safe targets. The vampire is the recipient and the prey is the donor.
+https://www.hema-quebec.qc.ca/userfiles/image/photos/sang/anglais/Compatibilite-ang.jpg
+
+Hint: Writing your cases will be much shorter and easier if you use the Java String method 'contains'.
+It works like this:
+
+	//if we have 2 strings str and str2
+	String str = "abc";
+	String str2 = "bc";
+
+	//we can use contains on one of the strings (str) to see if it contains the other (str2)
+	boolean b = str.contains(str2);
+
+In this case, b will be true. Since contains gives us a boolean, you can directly use it in an if statement:
+	if (str.contains("a")){
+		//do something
+	}
+
+Think about the patterns that occur in the compatibility chart, and how you can quickly check them using contains.
+
+Example Output:
+	What is the vampire's blood type? A+
+	Which blood type is on the menu today? O+
+
+	Safe to consume!
+
+
+Name your class Hw2pr6 and your file Hw2pr6.java
